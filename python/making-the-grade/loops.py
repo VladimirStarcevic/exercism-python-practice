@@ -7,8 +7,7 @@ def round_scores(student_scores):
     :param student_scores: list - float or int of student exam scores.
     :return: list - student scores *rounded* to nearest integer value.
     """
-    if not student_scores:
-        raise ValueError("Cannot operate with grades of an empty list")
+
 
     rounded_grade_list = []
     for grade in student_scores:
