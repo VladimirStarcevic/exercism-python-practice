@@ -1,5 +1,4 @@
 """Functions to manage a users shopping cart items."""
-from IPython.core.events import pre_run_cell
 
 
 def add_item(current_cart, items_to_add):
@@ -82,23 +81,10 @@ def send_to_store(cart: dict, aisle_mapping: dict):
 def update_store_inventory(fulfillment_cart, store_inventory):
     """Update store inventory levels with user order.
 
-    :param fulfillment_cart:
     :param fulfillment cart: dict - fulfillment cart to send to store.
     :param store_inventory: dict - store available inventory
     :return: dict - store_inventory updated.
     """
-    # {'Orange': [1, 'Aisle 4', False], 'Milk': [2, 'Aisle 2', True], 'Banana': [3, 'Aisle 5', False], 'Apple': [2, 'Aisle 4', False]},
-    # {'Banana': [15, 'Aisle 5', False], 'Apple': [12, 'Aisle 4', False], 'Orange': [1, 'Aisle 4', False], 'Milk': [4, 'Aisle 2', True]}
-
-    # {'Banana': [12, 'Aisle 5', False], 'Apple': [10, 'Aisle 4', False], 'Orange': ['Out of Stock', 'Aisle 4', False], 'Milk': [2, 'Aisle 2', True]}
-
-
-    # dict_keys(['Orange', 'Milk', 'Banana', 'Apple'])
-    # 0
-    # 2
-    # 12
-    # 10
-    # [1, 2, 3, 2]
 
     product_cart_list = fulfillment_cart.keys()
     for product in product_cart_list:

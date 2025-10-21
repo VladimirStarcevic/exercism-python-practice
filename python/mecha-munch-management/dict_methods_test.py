@@ -1,6 +1,8 @@
 import unittest
-import pytest
 from collections import OrderedDict
+
+import pytest
+
 from dict_methods import (
     add_item,
     read_notes,
@@ -9,7 +11,6 @@ from dict_methods import (
     send_to_store,
     update_store_inventory,
 )
-
 from dict_methods_test_data import (
     add_item_data,
     read_notes_data,
@@ -18,6 +19,7 @@ from dict_methods_test_data import (
     send_to_store_data,
     update_store_inventory_data,
 )
+
 
 class MechaMunchManagementTest(unittest.TestCase):
 
